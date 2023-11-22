@@ -25,25 +25,25 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <img src="img/6.jpg" class="images" alt="image" >
+            <img src="img/6.jpg" class="images" alt="image" data-bs-toggle="modal" data-bs-target="#exampleModal">
         </div>
         <div class="col">
-            <img src="img/1.jpg" class="images" alt="image" >
+            <img src="img/1.jpg" class="images" alt="image" data-bs-toggle="modal" data-bs-target="#exampleModal">
         </div>
         <div class="col">
-            <img src="img/2.jpg" class="images" alt="image" >
+            <img src="img/2.jpg" class="images" alt="image"data-bs-toggle="modal" data-bs-target="#exampleModal" >
         </div>
     </div>
     <br><br>
     <div class="row">
         <div class="col">
-            <img src="img/3.jpg" class="images" alt="image">
+            <img src="img/3.jpg" class="images" alt="image" data-bs-toggle="modal" data-bs-target="#exampleModal">
         </div>
         <div class="col">
-            <img src="img/4.jpg" class="images" alt="image">
+            <img src="img/4.jpg" class="images" alt="image" data-bs-toggle="modal" data-bs-target="#exampleModal">
         </div>
         <div class="col">
-            <img src="img/5.jpg" class="images" alt="image">
+            <img src="img/5.jpg" class="images" alt="image" data-bs-toggle="modal" data-bs-target="#exampleModal">
         </div>
     </div>
 </div>
@@ -58,7 +58,7 @@
            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <img src="img/6.jpg" class="modal-images me auto" alt="model-image">
+          <img src="" class="modal-images" alt="model-image">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>          
@@ -68,19 +68,15 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
       var modalResimler = document.querySelectorAll('.images');
-      var modalResim = document.querySelector('.modal-images');
-      var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
-  
+      var modalResim = document.querySelector('.modal-images');  
       modalResimler.forEach(function (resim) {
         resim.addEventListener('click', function () {
           var tiklananResimSrc = this.getAttribute('src');
           modalResim.setAttribute('src', tiklananResimSrc);
-          modal.show();
         });
       });
-    });
+    
   </script>
   
 
